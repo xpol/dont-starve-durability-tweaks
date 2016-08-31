@@ -1,5 +1,6 @@
 std = 'max'
 globals = {
+  'GLOBAL',
   'AddAction',
   'AddBrainPostInit',
   'AddClassPostConstruct',
@@ -50,5 +51,6 @@ files['modinfo.lua'].globals = {
   'dont_starve_compatible',
   'reign_of_giants_compatible',
   'shipwrecked_compatible',
+  'dst_compatible',
   'configuration_options',
 }
