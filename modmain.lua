@@ -95,20 +95,19 @@ end
 
 
 local function TuningDurability(inst, factor)
-	local function tune(component, filed, ...)
+	local function tune(component, ...)
 		if component then
-			local before = component.before
-			if not before then
-				before = {}
-				for _, field in ipairs(filed, ...) do
-					before[field] = component[field]
-					component[field] = before[field] * factor
+			local fields, original = {...}, component.original
+			if not original then
+				for _, field in ipairs(fields) do
+					component[field] = math.max(component[field], original[field] * factor)
 				end
-				component.before = before
 			else
-				for _, field in ipairs(filed, ...) do
-					component[field] = math.max(component[field], before[field] * factor)
+				original = {}
+				for _, field in ipairs(fields) do
+					original[field], component[field] = component[field], component[field] * factor
 				end
+				component.original = original
 			end
 		end
 	end
