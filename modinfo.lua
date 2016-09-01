@@ -1,4 +1,4 @@
-name = "Tweak Durabilities"
+name = "Durability Tweaks"
 description = "Tweaks durabilities of tools, weapons & armors + Increase torch radius(opt) + % hidden on infinite items"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
@@ -8,8 +8,8 @@ forumthread = ""
 
 api_version = 6
 
-icon_atlas = "TweakDurabilities.xml"
-icon = "TweakDurabilities.tex"
+icon_atlas = "DurabilityTweaks.xml"
+icon = "DurabilityTweaks.tex"
 
 dont_starve_compatible = true
 reign_of_giants_compatible = true

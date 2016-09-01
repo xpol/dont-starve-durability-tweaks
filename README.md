@@ -1,10 +1,10 @@
-# Tweaks Durabilities
+# Durability Tweaks
 
 ## About
 
 This is a mod for Don't Starve (DS/RoG/Sw) tweaks durabilities or make them infinite.
 
-For more information please go to mod configuration page in game.
+For more information please go to mod configuration screen in game (Mods -> Durability Tweaks -> Configure Mod).
 
 
 ## What's news
@@ -18,7 +18,7 @@ It was based on [Infinite things [DS-RoG-Sw]](https://steamcommunity.com/sharedf
 
 ## Contribute
 
-You are welcome to contribute to this mod in [GitHub](https://github.com/xpol/dont-starve-tweak-durabilities). There you can:
+You are welcome to contribute to this mod in [GitHub](https://github.com/xpol/dont-starve-durability-tweaks). There you can:
 
-* [Fire a bug or make a feature request](https://github.com/xpol/dont-starve-tweak-durabilities/issues)
+* [Fire a bug or make a feature request](https://github.com/xpol/dont-starve-durability-tweaks/issues)
 * Fork and make a pull request.
