@@ -2,6 +2,7 @@ local TUNING = GLOBAL.TUNING
 local ACTIONS = GLOBAL.ACTIONS
 local require = GLOBAL.require
 local math = GLOBAL.math
+local GetSeasonManager = GLOBAL.GetSeasonManager
 
 local BOOMERANG_SPEED = GetModConfigData("BOOMERANG_SPEED")
 local BOOST_GOLD = GetModConfigData("BOOST_GOLD")
