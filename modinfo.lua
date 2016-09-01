@@ -1,5 +1,5 @@
-name = "Infinite things [Refactored]"
-description = "Change durability of tools, weapons & armor + Increase torch radius(opt) + % hidden on infinite items"
+name = "Tweak Durabilities"
+description = "Tweaks durabilities of tools, weapons & armors + Increase torch radius(opt) + % hidden on infinite items"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
 version = "3.0"
@@ -8,8 +8,8 @@ forumthread = ""
 
 api_version = 6
 
-icon_atlas = "InfiniteThings.xml"
-icon = "InfiniteThings.tex"
+icon_atlas = "TweakDurabilities.xml"
+icon = "TweakDurabilities.tex"
 
 dont_starve_compatible = true
 reign_of_giants_compatible = true
