@@ -427,7 +427,7 @@ configuration_options =
 
 		{
 		name = "CAMPING_DURABILITY",
-		label = "Teak sleep items",
+		label = "Tweak sleep items",
 		hover = "bed roll, tent, siesta hut",
 		options = {
 			{description = "25%", data = 0.25},
