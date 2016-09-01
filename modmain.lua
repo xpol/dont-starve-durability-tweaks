@@ -141,9 +141,7 @@ local function RemoveDurability(inst)
 		inst.components.fueled.DoDelta = function() end
 	end
 	if inst.components.armor then
-		inst.components.armor.SetCondition = function(self, condition)
-			print(('Try to change armor %s condition to: %f, but ignored as armor infinte are truned on'):format(self.inst.prefab or "", condition))
-		end
+		inst.components.armor.SetCondition = function() end
 	end
 end
 
