@@ -1,4 +1,4 @@
-name = "Infinite things [DS-RoG-Sw]"
+name = "Infinite things [Refactored]"
 description = "Change durability of tools, weapons & armor + Increase torch radius(opt) + % hidden on infinite items"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
