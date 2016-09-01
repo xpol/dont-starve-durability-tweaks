@@ -131,6 +131,7 @@ local function RemoveDurability(inst)
 
 	if inst.components.fueled then
 		inst.components.fueled.StartConsuming = function() end
+		inst.components.fueled.DoDelta = function() end
 	end
 	if inst.components.armor then
 		inst.components.armor.SetCondition = function(self, condition)
