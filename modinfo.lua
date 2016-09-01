@@ -333,6 +333,7 @@ configuration_options =
 	{
 		name = "HEATROCK_DURABILITY",
 		label = "Tweak heatrock",
+		hover = "heatrock warming speed in summer and cool down speed in winter",
 		options = {
 			{description = "25%", data = 0.25},
 			{description = "50%", data = 0.5},

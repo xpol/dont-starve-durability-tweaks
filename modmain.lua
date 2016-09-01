@@ -76,17 +76,23 @@ end
 
 if HEATROCK_DURABILITY ~= "Default" then
 	if HEATROCK_DURABILITY == "Infinite" then
-		AddComponentPostInit("temperature", function(inst)
-			if inst.components.health then
-				inst.components.health.DoDelta = function() end
+		AddPrefabPostInit("heatrock", function(inst)
+			if inst.components.temperature then
+				inst.components.temperature:SetTemperature(19) -- always at 19 dgree
+				inst.components.temperature.DoDelta = function() end
 			end
 		end)
 	else
-		AddComponentPostInit("temperature", function(inst)
-			if inst.components.health then
-				local OldDelta = inst.components.health.DoDelta or function() end
-				inst.components.health.DoDelta = function(self, delta, ...)
-					OldDelta(self, delta/HEATROCK_DURABILITY, ...)
+		AddPrefabPostInit("heatrock", function(inst)
+			if inst.components.temperature then
+				local DoDelta = inst.components.temperature.DoDelta
+				inst.components.temperature.DoDelta = function(self, delta, ...)
+					if (GetSeasonManager():IsWinter() and delta < 0)
+					or (GetSeasonManager():IsSummer() and delta > 0) then
+						DoDelta(self, delta/HEATROCK_DURABILITY, ...)
+						return
+					end
+					DoDelta(self, delta/HEATROCK_DURABILITY, ...)
 				end
 			end
 		end)
