@@ -394,6 +394,7 @@ local DURABILITIES = {
 		"minerhat",
 		"nightlight",
 		"pumpkin_lantern",
+        "molehat",
 	},
 	TORCH_DURABILITY = {
 		"torch"
