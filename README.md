@@ -6,6 +6,10 @@ This is a mod for Don't Starve (DS/RoG/Sw) tweaks durabilities or make them infi
 
 For more information please go to mod configuration screen in game (Mods -> Durability Tweaks -> Configure Mod).
 
+It was based on [Infinite things [DS-RoG-Sw]](https://steamcommunity.com/sharedfiles/filedetails/?id=605549447) by DMCartz, Phixius83, Noldaz.
+
+Great thanks to original authors.
+
 
 ## What's news
 
@@ -27,9 +31,3 @@ You are welcome to contribute to this mod in [GitHub](https://github.com/xpol/do
 
 * [Fire a bug or make a feature request](https://github.com/xpol/dont-starve-durability-tweaks/issues)
 * Fork and make a pull request.
-
-## Thanks
-
-It was based on [Infinite things [DS-RoG-Sw]](https://steamcommunity.com/sharedfiles/filedetails/?id=605549447) by DMCartz, Phixius83, Noldaz.
-
-Great thanks to original authors.
