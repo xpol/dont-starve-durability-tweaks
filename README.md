@@ -9,6 +9,13 @@ For more information please go to mod configuration screen in game (Mods -> Dura
 
 ## What's news
 
+### 3.0.1
+
+* Include molehat when tweak lights durability.
+* Fixes code that may cause crash.
+
+### 3.0.0
+
 * Refactor, main mode script only 400+ lines (was 1300+) and much more easer to maintain.
 * Infinite armor are working now.
 * Tweak heatrock only affect warming speed in summer and cool down speed in winter.
