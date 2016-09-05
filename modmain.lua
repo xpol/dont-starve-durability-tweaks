@@ -106,15 +106,17 @@ local function TuningDurability(inst, factor)
 		if component then
 			local fields, original = {...}, component.original
 			if not original then
-				for _, field in ipairs(fields) do
-					component[field] = math.max(component[field], original[field] * factor)
-				end
-			else
 				original = {}
 				for _, field in ipairs(fields) do
-					original[field], component[field] = component[field], component[field] * factor
+					original[field] = component[field]
 				end
 				component.original = original
+			end
+
+			for _, field in ipairs(fields) do
+				if original[field] and component[field] then
+					component[field] = math.max(component[field], original[field] * factor)
+				end
 			end
 		end
 	end
