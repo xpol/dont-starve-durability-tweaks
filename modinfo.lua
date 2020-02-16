@@ -2,7 +2,7 @@ name = "Durability Tweaks"
 description = "Tweaks durabilities of tools, weapons & armors + Increase torch radius(opt) + % hidden on infinite items"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
-version = "3.0.1"
+version = "3.1.0"
 
 forumthread = ""
 
@@ -14,7 +14,9 @@ icon = "DurabilityTweaks.tex"
 dont_starve_compatible = true
 reign_of_giants_compatible = true
 shipwrecked_compatible = true
-dst_compatible = false
+dst_compatible = true
+
+client_only_mod = false
 
 configuration_options =
 {

@@ -2,7 +2,7 @@ local TUNING = GLOBAL.TUNING
 local ACTIONS = GLOBAL.ACTIONS
 local require = GLOBAL.require
 local math = GLOBAL.math
-local GetSeasonManager = GLOBAL.GetSeasonManager
+local DST = GLOBAL.TheSim.GetGameID ~= nil and GLOBAL.TheSim:GetGameID() == "DST"
 
 local BOOMERANG_SPEED = GetModConfigData("BOOMERANG_SPEED")
 local BOOST_GOLD = GetModConfigData("BOOST_GOLD")
@@ -10,6 +10,13 @@ local BOOST_OBSIDIAN = GetModConfigData("BOOST_OBSIDIAN")
 local HEATROCK_DURABILITY = GetModConfigData("HEATROCK_DURABILITY")
 local TORCH_RADIUS = GetModConfigData("TORCH_RADIUS")
 local ICEBOX_TUNING = GetModConfigData("ICEBOX_TUNING")
+
+-- Usage IsSeason(value)
+-- Where value can be one of: "autumn", "winter", "spring", "summer", "mild", "wet", "green", "dry", "temperate", "humid", "lush"
+local function IsSeason(value)
+	local season = DST and GLOBAL.TheWorld.state.season or GLOBAL.GetSeasonManager():GetSeason()
+	return season == value
+end
 
 -- Remove % on itemslot for infinte items
 
@@ -88,8 +95,8 @@ if HEATROCK_DURABILITY ~= "Default" then
 			if inst.components.temperature then
 				local DoDelta = inst.components.temperature.DoDelta
 				inst.components.temperature.DoDelta = function(self, delta, ...)
-					if (GetSeasonManager():IsWinter() and delta < 0)
-					or (GetSeasonManager():IsSummer() and delta > 0) then
+					if (IsSeason("winter") and delta < 0)
+					or (IsSeason("summer") and delta > 0) then
 						DoDelta(self, delta/HEATROCK_DURABILITY, ...)
 						return
 					end
