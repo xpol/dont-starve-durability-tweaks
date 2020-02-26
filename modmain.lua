@@ -5,8 +5,6 @@ local math = GLOBAL.math
 local DST = GLOBAL.TheSim.GetGameID ~= nil and GLOBAL.TheSim:GetGameID() == "DST"
 
 local BOOMERANG_SPEED = GetModConfigData("BOOMERANG_SPEED")
-local BOOST_GOLD = GetModConfigData("BOOST_GOLD")
-local BOOST_OBSIDIAN = GetModConfigData("BOOST_OBSIDIAN")
 local HEATROCK_DURABILITY = GetModConfigData("HEATROCK_DURABILITY")
 local TORCH_RADIUS = GetModConfigData("TORCH_RADIUS")
 local ICEBOX_TUNING = GetModConfigData("ICEBOX_TUNING")
@@ -28,35 +26,67 @@ function ItemTile:SetPercent(percent)
 	end
 end
 
--- Boost gold axe, pickaxe, machete
-if BOOST_GOLD then
-	AddPrefabPostInit("goldenaxe", function(inst)
-		inst.components.weapon:SetDamage(TUNING.AXE_DAMAGE*2)
-		inst.components.tool:SetAction(ACTIONS.CHOP, 2)
-	end)
-	AddPrefabPostInit("goldenpickaxe", function(inst)
-		inst.components.weapon:SetDamage(TUNING.PICK_DAMAGE*2)
-		inst.components.tool:SetAction(ACTIONS.MINE, 2)
-	end)
-	AddPrefabPostInit("goldenmachete", function(inst)
-		inst.components.weapon:SetDamage(TUNING.MACHETE_DAMAGE*2)
-		inst.components.tool:SetAction(ACTIONS.HACK, 2)
-	end)
+local GOLD_TOOLS = {
+	{
+		prefab = "goldenaxe",
+		damage = "AXE_DAMAGE",
+		action = "CHOP",
+	},
+	{
+		prefab = "goldenpickaxe",
+		action = "MINE",
+		damage = "PICK_DAMAGE",
+
+	},
+	{
+		prefab = "goldenmachete",
+		action = "HACK",
+		damage = "MACHETE_DAMAGE",
+	}
+}
+
+local OBSIDIAN_TOOLS = {
+	{
+		prefab = "obsidianaxe",
+		action = "CHOP",
+		damage = "AXE_DAMAGE",
+	},
+	{
+		prefab = "obsidianmachete",
+		action = "HACK",
+		damage = "MACHETE_DAMAGE",
+	},
+	{
+		prefab = "spear_obsidian",
+		damage = "SPEAR_DAMAGE",
+	},
+}
+
+
+local function BoostAction(items, time)
+	for _, item in ipairs(items) do
+		if item.action then
+			AddPrefabPostInit(item.prefab, function(inst)
+				inst.components.tool:SetAction(ACTIONS[item.action], time)
+			end)
+		end
+	end
 end
 
-if BOOST_OBSIDIAN then
-	AddPrefabPostInit("obsidianaxe", function(inst)
-		inst.components.weapon:SetDamage(TUNING.AXE_DAMAGE*3)
-		inst.components.tool:SetAction(ACTIONS.CHOP, 3)
-	end)
-	AddPrefabPostInit("obsidianmachete", function(inst)
-		inst.components.weapon:SetDamage(TUNING.MACHETE_DAMAGE*3)
-		inst.components.tool:SetAction(ACTIONS.HACK, 3)
-	end)
-	AddPrefabPostInit("spear_obsidian", function(inst)
-		inst.components.weapon:SetDamage(TUNING.SPEAR_DAMAGE*3)
-	end)
+local function BoostDamage(items, time)
+	for _, item in ipairs(items) do
+		if item.damage then
+			AddPrefabPostInit(item.prefab, function(inst)
+				inst.components.weapon:SetDamage(TUNING[item.damage] * time)
+			end)
+		end
+	end
 end
+
+if GetModConfigData("BOOST_GOLD_ACTION") then BoostAction(GOLD_TOOLS, 2) end
+if GetModConfigData("BOOST_GOLD_DAMAGE") then BoostDamage(GOLD_TOOLS, 2) end
+if GetModConfigData("BOOST_OBSIDIAN_ACTION") then BoostAction(OBSIDIAN_TOOLS, 3) end
+if GetModConfigData("BOOST_OBSIDIAN_DAMAGE") then BoostDamage(OBSIDIAN_TOOLS, 3) end
 
 -- Increase boomerang speed
 
@@ -134,23 +164,25 @@ local function TuningDurability(inst, factor)
 	tune(inst.components.armor, 'maxcondition', 'condition')
 end
 
+local function DoNothing() end
+
 local function RemoveDurability(inst)
 	inst:AddTag("Infinite")
 
 	if inst.components.finiteuses then
-		inst.components.finiteuses.Use = function() end
+		inst.components.finiteuses.Use = DoNothing
 	end
 
 	if inst.components.perishable then
-		inst.components.perishable.StartPerishing = function() end
+		inst.components.perishable.StartPerishing = DoNothing
 	end
 
 	if inst.components.fueled then
-		inst.components.fueled.StartConsuming = function() end
-		inst.components.fueled.DoDelta = function() end
+		inst.components.fueled.StartConsuming = DoNothing
+		inst.components.fueled.DoDelta = DoNothing
 	end
 	if inst.components.armor then
-		inst.components.armor.SetCondition = function() end
+		inst.components.armor.SetCondition = DoNothing
 	end
 end
 
