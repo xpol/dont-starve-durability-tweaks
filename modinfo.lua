@@ -2,7 +2,7 @@ name = "Durability Tweaks"
 description = "Tweaks durabilities of tools, weapons & armors + Increase torch radius(opt) + % hidden on infinite items"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
-version = "3.1.0"
+version = "3.1.1"
 
 forumthread = ""
 
