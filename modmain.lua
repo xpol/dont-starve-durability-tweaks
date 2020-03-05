@@ -1,17 +1,6 @@
-local TUNING = GLOBAL.TUNING
-local ACTIONS = GLOBAL.ACTIONS
 local require = GLOBAL.require
 local math = GLOBAL.math
 local DST = GLOBAL.TheSim.GetGameID ~= nil and GLOBAL.TheSim:GetGameID() == "DST"
-
-local HEATROCK_DURABILITY = GetModConfigData("HEATROCK_DURABILITY")
-
--- Usage IsSeason(value)
--- Where value can be one of: "autumn", "winter", "spring", "summer", "mild", "wet", "green", "dry", "temperate", "humid", "lush"
-local function IsSeason(value)
-	local season = DST and GLOBAL.TheWorld.state.season or GLOBAL.GetSeasonManager():GetSeason()
-	return season == value
-end
 
 -- Remove % on itemslot for infinte items
 
@@ -22,46 +11,6 @@ function ItemTile:SetPercent(percent)
 		ItemTile_SetPercent(self, percent)
 	end
 end
---[[
-if HEATROCK_DURABILITY ~= "Default" then
-	if HEATROCK_DURABILITY == "Infinite" then
-		AddPrefabPostInit("heatrock", function(inst)
-			if GLOBAL.TheWorld.ismastersim then
-				inst:RemoveComponent("fueled")
-				local function switchListenerFns(t)
-					local listeners = t["temperaturedelta"]
-					local listener_fns = listeners[inst]
-					local TemperatureChange = listener_fns[1]
-					listener_fns[1] = function(inst, data)
-						inst.components.fueled = {
-							GetPercent = function() return 1 end,
-							SetPercent = function() end,
-						}
-						TemperatureChange(inst, data)
-						inst.components.fueled = nil
-					end
-				end
-				switchListenerFns(inst.event_listeners)
-				switchListenerFns(inst.event_listening)
-			end
-		end)
-	else
-		AddPrefabPostInit("heatrock", function(inst)
-			if inst.components.temperature then
-				local DoDelta = inst.components.temperature.DoDelta
-				inst.components.temperature.DoDelta = function(self, delta, ...)
-					if (IsSeason("winter") and delta < 0)
-					or (IsSeason("summer") and delta > 0) then
-						DoDelta(self, delta/HEATROCK_DURABILITY, ...)
-						return
-					end
-					DoDelta(self, delta/HEATROCK_DURABILITY, ...)
-				end
-			end
-		end)
-	end
-end
-]]
 
 local function TuningDurability(inst, factor)
 	local function tune(component, ...)
@@ -279,7 +228,7 @@ local DURABILITIES = {
 		"saddle_basic",
 		"saddle_war",
 		"saddle_race",
-	}
+	},
 	SEWINGKIT_DURABILITY = {
 		"sewing_kit",
 	},
