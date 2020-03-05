@@ -1,12 +1,13 @@
 name = "Durability Tweaks"
-description = "Tweaks durabilities of tools, weapons & armors + Increase torch radius(opt) + % hidden on infinite items"
+description = "Tweaks durabilities of tools, weapons, armors, boats, staffs, amulets, saddles and more"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
-version = "3.1.1"
+version = "3.2.0"
 
 forumthread = ""
 
 api_version = 6
+api_version_dst = 10
 
 icon_atlas = "DurabilityTweaks.xml"
 icon = "DurabilityTweaks.tex"
@@ -24,11 +25,6 @@ local durability_options = {
 	{description = "400%", data = 4},
 	{description = "800%", data = 8},
 	{description = "Infinite", data = "Infinite"},
-}
-
-local yes_no_options = {
-	{description = "No", data = false},
-	{description = "Yes", data = true},
 }
 
 configuration_options =
@@ -74,25 +70,6 @@ configuration_options =
 	},
 
 	{
-		name = "BOOMERANG_SPEED",
-		label = "Tweak boomerang speed",
-		hover = "Auto-catch mod recommended",
-		options = {
-			{description = "5", data = 5},
-			{description = "10 (Default)", data = 10},
-			{description = "15", data = 15},
-			{description = "20", data = 20},
-			{description = "25", data = 25},
-			{description = "30", data = 30},
-			{description = "35", data = 35},
-			{description = "40", data = 40},
-			{description = "50", data = 50},
-		},
-		default = 10,
-	},
-
-
-	{
 		name = "STAFF_DURABILITY",
 		label = "Tweak staffs uses",
 		options = durability_options,
@@ -112,14 +89,12 @@ configuration_options =
 		options = durability_options,
 		default = "Default",
 	},
-
 	{
 		name = "COMPASS_DURABILITY",
 		label = "Tweak compass",
 		options = durability_options,
 		default = "Default",
 	},
-
 	{
 		name = "PRIMARYTOOL_DURABILITY",
 		label = "Tweak primary tools",
@@ -136,44 +111,12 @@ configuration_options =
 		default = "Default",
 	},
 	{
-		name = "BOOST_GOLD_DAMAGE",
-		label = "Boost gold tools damage",
-		hover = "Weapon damage X 2",
-		options = yes_no_options,
-		default = false,
-	},
-	{
-		name = "BOOST_GOLD_ACTION",
-		label = "Boost gold tools acction",
-		hover = "Action required / 2",
-		options = yes_no_options,
-		default = false,
-	},
-
-	{
 		name = "OBSIDIAN_DURABILITY",
 		label = "Obsidian items durability",
 		hover = "Obsidian axe, mahete, spear",
 		options = durability_options,
 		default = "Default",
 	},
-
-	{
-		name = "BOOST_OBSIDIAN_DAMAGE",
-		label = "Boost obsidian tools damage(SW)",
-		hover = "Weapon damage X 3",
-		options = yes_no_options,
-		default = false,
-	},
-
-	{
-		name = "BOOST_OBSIDIAN_ACTION",
-		label = "Boost obsidian tools action(SW)",
-		hover = "Action required / 3",
-		options = yes_no_options,
-		default = false,
-	},
-
 	{
 		name = "TRAP_DURABILITY",
 		label = "Traps durability",
@@ -198,7 +141,7 @@ configuration_options =
 		default = "Default",
 	},
 
-		{
+	{
 		name = "LIGHT_DURABILITY",
 		label = "Tweak portable light",
 		hover = "Lantern, lighter, miner's hat, nightlight, pumpkin lantern",
@@ -206,50 +149,23 @@ configuration_options =
 		default = "Default",
 	},
 
-		{
+	{
 		name = "TORCH_DURABILITY",
 		label = "Torch life",
 		options = durability_options,
 		default = "Default",
 	},
-
 	{
-		name = "TORCH_RADIUS",
-		label = "Increase light radius of torch",
-		hover = "From 2m to 5m",
-		options = yes_no_options,
-		default = false,
-	},
-
-		{
 		name = "CAMPING_DURABILITY",
 		label = "Tweak sleep items",
 		hover = "bed roll, tent, siesta hut",
 		options = durability_options,
 		default = "Default",
 	},
-
-		{
+	{
 		name = "BOOK_DURABILITY",
 		label = "Book Durability",
 		options = durability_options,
-		default = "Default",
-	},
-		{
-		name = "ICEBOX_TUNING",
-		label = "Icebox efficiency",
-		options = {
-			{descript = "50% (Default)", data = "Default"},
-			{description = "75%", data = 0.75},
-			{description = "100%", data = 1},
-			{description = "125%", data = 1.25},
-			{description = "150%", data = 1.5},
-			{description = "200%", data = 2},
-			{description = "500%", data = 5},
-			{description = "1000%", data = 10},
-			{description = "Infinite", data = -10},
-		},
-
 		default = "Default",
 	},
 	{
@@ -271,5 +187,10 @@ configuration_options =
 		options = durability_options,
 		default = "Default",
 	},
-
+	{
+		name = "SADDLE_DURABILITY",
+		label = "Saddles durability(DST)",
+		options = durability_options,
+		default = "Default",
+	},
 }

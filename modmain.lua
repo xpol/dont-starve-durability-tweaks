@@ -4,10 +4,7 @@ local require = GLOBAL.require
 local math = GLOBAL.math
 local DST = GLOBAL.TheSim.GetGameID ~= nil and GLOBAL.TheSim:GetGameID() == "DST"
 
-local BOOMERANG_SPEED = GetModConfigData("BOOMERANG_SPEED")
 local HEATROCK_DURABILITY = GetModConfigData("HEATROCK_DURABILITY")
-local TORCH_RADIUS = GetModConfigData("TORCH_RADIUS")
-local ICEBOX_TUNING = GetModConfigData("ICEBOX_TUNING")
 
 -- Usage IsSeason(value)
 -- Where value can be one of: "autumn", "winter", "spring", "summer", "mild", "wet", "green", "dry", "temperate", "humid", "lush"
@@ -25,99 +22,27 @@ function ItemTile:SetPercent(percent)
 		ItemTile_SetPercent(self, percent)
 	end
 end
-
-local GOLD_TOOLS = {
-	{
-		prefab = "goldenaxe",
-		damage = "AXE_DAMAGE",
-		action = "CHOP",
-	},
-	{
-		prefab = "goldenpickaxe",
-		action = "MINE",
-		damage = "PICK_DAMAGE",
-
-	},
-	{
-		prefab = "goldenmachete",
-		action = "HACK",
-		damage = "MACHETE_DAMAGE",
-	}
-}
-
-local OBSIDIAN_TOOLS = {
-	{
-		prefab = "obsidianaxe",
-		action = "CHOP",
-		damage = "AXE_DAMAGE",
-	},
-	{
-		prefab = "obsidianmachete",
-		action = "HACK",
-		damage = "MACHETE_DAMAGE",
-	},
-	{
-		prefab = "spear_obsidian",
-		damage = "SPEAR_DAMAGE",
-	},
-}
-
-
-local function BoostAction(items, time)
-	for _, item in ipairs(items) do
-		if item.action then
-			AddPrefabPostInit(item.prefab, function(inst)
-				inst.components.tool:SetAction(ACTIONS[item.action], time)
-			end)
-		end
-	end
-end
-
-local function BoostDamage(items, time)
-	for _, item in ipairs(items) do
-		if item.damage then
-			AddPrefabPostInit(item.prefab, function(inst)
-				inst.components.weapon:SetDamage(TUNING[item.damage] * time)
-			end)
-		end
-	end
-end
-
-if GetModConfigData("BOOST_GOLD_ACTION") then BoostAction(GOLD_TOOLS, 2) end
-if GetModConfigData("BOOST_GOLD_DAMAGE") then BoostDamage(GOLD_TOOLS, 2) end
-if GetModConfigData("BOOST_OBSIDIAN_ACTION") then BoostAction(OBSIDIAN_TOOLS, 3) end
-if GetModConfigData("BOOST_OBSIDIAN_DAMAGE") then BoostDamage(OBSIDIAN_TOOLS, 3) end
-
--- Increase boomerang speed
-
-if BOOMERANG_SPEED ~= 10 then
-	AddPrefabPostInit("boomerang", function(inst)
-		inst.components.projectile:SetSpeed(BOOMERANG_SPEED)
-	end)
-end
-
--- Increase torch light radius
-
-if TORCH_RADIUS then
-	AddPrefabPostInit("torchfire", function(inst)
-		if inst and inst.Light then
-			inst.Light:SetRadius(5) --Default: 2 (meters)
-		end
-	end)
-end
-
-
-if ICEBOX_TUNING ~= "Default" then
-	TUNING.PERISH_FRIDGE_MULT = ICEBOX_TUNING
-end
-
-
+--[[
 if HEATROCK_DURABILITY ~= "Default" then
 	if HEATROCK_DURABILITY == "Infinite" then
 		AddPrefabPostInit("heatrock", function(inst)
-			if inst.components.temperature then
-				inst.components.temperature:SetTemperature(19) -- always at 19 dgree
-				inst.components.temperature.DoDelta = function() end
+			if GLOBAL.TheWorld.ismastersim then
+				inst:RemoveComponent("fueled")
+				local function switchListenerFns(t)
+					local listeners = t["temperaturedelta"]
+					local listener_fns = listeners[inst]
+					local TemperatureChange = listener_fns[1]
+					listener_fns[1] = function(inst, data)
+						inst.components.fueled = {
+							GetPercent = function() return 1 end,
+							SetPercent = function() end,
+						}
+						TemperatureChange(inst, data)
+						inst.components.fueled = nil
+					end
+				end
+				switchListenerFns(inst.event_listeners)
+				switchListenerFns(inst.event_listening)
 			end
 		end)
 	else
@@ -136,7 +61,7 @@ if HEATROCK_DURABILITY ~= "Default" then
 		end)
 	end
 end
-
+]]
 
 local function TuningDurability(inst, factor)
 	local function tune(component, ...)
@@ -210,6 +135,7 @@ local DURABILITIES = {
 		"spear",
 		"tentaclespike",
 		"spear_wathgrithr",
+		"whip",
 
 		-- DLC: Shipwrecked:
 		"trident",
@@ -291,6 +217,9 @@ local DURABILITIES = {
 		"ruinshat",
 		"slurtlehat",
 
+		--
+		"wathgrithrhat",
+
 		-- DLC: Shipwrecked:
 		"armorlimestone",
 		"armorseashell",
@@ -318,6 +247,7 @@ local DURABILITIES = {
 		"orangestaff",
 		"telestaff",
 		"yellowstaff",
+		"nightstick",
 	},
 	AMULET_DURABILITY = {
 		"amulet",
@@ -337,10 +267,19 @@ local DURABILITIES = {
 		"fishingrod",
 		"horn",
 		"panflute",
+		-- DST
+		"brush",
+
 
 		-- Mod: Mining Machine [DST]:
 		"wrench",
 	},
+	SADDLE_DURABILITY = {
+		"pocket_scale",
+		"saddle_basic",
+		"saddle_war",
+		"saddle_race",
+	}
 	SEWINGKIT_DURABILITY = {
 		"sewing_kit",
 	},
@@ -355,6 +294,8 @@ local DURABILITIES = {
 		"pitchfork",
 		"multitool_axe_pickaxe",
 		"machete",
+
+		"minfan", -- DST
 
 		-- Mod: Scythe:
 		"Scythe"
@@ -470,6 +411,8 @@ local DURABILITIES = {
 		"telescope",
 		"supertelescope",
 		"harpoon",
+		"oar", -- 船桨
+		"oar_driftwood", -- 船桨
 	},
 	BOATREPAIRKIT_DURABILITY = {
 		"boatrepairkit"
@@ -479,6 +422,9 @@ local DURABILITIES = {
 		"obsidianaxe",
 		"spear_obsidian"
 	},
+	HEATROCK_DURABILITY = {
+		"heatrock"
+	}
 }
 
 for option, prefabs in pairs(DURABILITIES) do
