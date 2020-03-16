@@ -49,6 +49,7 @@ local function RemoveDurability(inst)
 
 	if inst.components.perishable then
 		inst.components.perishable.StartPerishing = DoNothing
+		inst.components.perishable.SetPercent = DoNothing
 	end
 
 	if inst.components.fueled then
