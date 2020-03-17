@@ -39,25 +39,36 @@ local function TuningDurability(inst, factor)
 end
 
 local function DoNothing() end
+local function fullPerishablePercent(self) return 1 end
 
 local function RemoveDurability(inst)
 	inst:AddTag("Infinite")
 
-	if inst.components.finiteuses then
-		inst.components.finiteuses.Use = DoNothing
+	local finiteuses = inst.components.finiteuses
+	if finiteuses then
+		finiteuses.Use = DoNothing
 	end
 
-	if inst.components.perishable then
-		inst.components.perishable.StartPerishing = DoNothing
-		inst.components.perishable.SetPercent = DoNothing
+	local perishable = inst.components.perishable
+	if perishable then
+		perishable.StartPerishing = DoNothing
+		local SetPercent = perishable.SetPercent
+		perishable.SetPercent = function(self, percent)
+			SetPercent(self, 1)
+		end
+
+		perishable.GetPercent = fullPerishablePercent
 	end
 
-	if inst.components.fueled then
-		inst.components.fueled.StartConsuming = DoNothing
-		inst.components.fueled.DoDelta = DoNothing
+	local fueled = inst.components.fueled
+	if fueled then
+		fueled.StartConsuming = DoNothing
+		fueled.DoDelta = DoNothing
 	end
-	if inst.components.armor then
-		inst.components.armor.SetCondition = DoNothing
+
+	local armor = inst.components.armor
+	if armor then
+		armor.SetCondition = DoNothing
 	end
 end
 

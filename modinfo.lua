@@ -2,7 +2,7 @@ name = "Durability Tweaks"
 description = "Tweaks durabilities of tools, weapons, armors, boats, staffs, amulets, saddles and more"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
-version = "3.2.2"
+version = "3.2.3"
 
 forumthread = ""
 
