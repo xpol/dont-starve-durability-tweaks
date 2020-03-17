@@ -2,16 +2,6 @@ local require = GLOBAL.require
 local math = GLOBAL.math
 local DST = GLOBAL.TheSim.GetGameID ~= nil and GLOBAL.TheSim:GetGameID() == "DST"
 
--- Remove % on itemslot for infinte items
-
-local ItemTile = require "widgets/itemtile"
-local ItemTile_SetPercent = ItemTile.SetPercent
-function ItemTile:SetPercent(percent)
-	if not self.item.components.inventoryitem or not self.item:HasTag("Infinite") then
-		ItemTile_SetPercent(self, percent)
-	end
-end
-
 local function TuningDurability(inst, factor)
 	local function tune(component, ...)
 		if component then
@@ -39,10 +29,11 @@ local function TuningDurability(inst, factor)
 end
 
 local function DoNothing() end
-local function fullPerishablePercent(self) return 1 end
+local function FullPerishablePercent(self) return 1 end
 
 local function RemoveDurability(inst)
 	inst:AddTag("Infinite")
+	inst:AddTag("hide_percentage")
 
 	local finiteuses = inst.components.finiteuses
 	if finiteuses then
@@ -57,7 +48,7 @@ local function RemoveDurability(inst)
 			SetPercent(self, 1)
 		end
 
-		perishable.GetPercent = fullPerishablePercent
+		perishable.GetPercent = FullPerishablePercent
 	end
 
 	local fueled = inst.components.fueled
@@ -209,6 +200,7 @@ local DURABILITIES = {
 		"telestaff",
 		"yellowstaff",
 		"nightstick",
+		"opalstaff",
 	},
 	AMULET_DURABILITY = {
 		"amulet",
