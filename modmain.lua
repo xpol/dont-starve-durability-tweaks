@@ -2,6 +2,18 @@ local require = GLOBAL.require
 local math = GLOBAL.math
 local DST = GLOBAL.TheSim.GetGameID ~= nil and GLOBAL.TheSim:GetGameID() == "DST"
 
+-- Hide percentage for Dont Starve/Reign of Giants/Shipwrecked.
+if not DST then
+	local ItemTile = require "widgets/itemtile"
+	local ItemTile_SetPercent = ItemTile.SetPercent
+	function ItemTile:SetPercent(percent)
+		if not self.item.components.inventoryitem or not self.item:HasTag("Infinite") then
+			ItemTile_SetPercent(self, percent)
+		end
+	end
+end
+
+
 local function TuningDurability(inst, factor)
 	local function tune(component, ...)
 		if component then
@@ -33,7 +45,8 @@ local function FullPerishablePercent(self) return 1 end
 
 local function RemoveDurability(inst)
 	inst:AddTag("Infinite")
-	inst:AddTag("hide_percentage")
+	-- To hide percentage on Dont Starve Together we set of the `hide_percentage` tag.
+	if DST then inst:AddTag("hide_percentage") end
 
 	local finiteuses = inst.components.finiteuses
 	if finiteuses then
