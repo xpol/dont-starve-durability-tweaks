@@ -214,6 +214,7 @@ local DURABILITIES = {
 		"yellowstaff",
 		"nightstick",
 		"opalstaff",
+		"staff_tornado",
 	},
 	AMULET_DURABILITY = {
 		"amulet",
