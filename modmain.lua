@@ -101,6 +101,9 @@ local DURABILITIES = {
 		"tentaclespike",
 		"spear_wathgrithr",
 		"whip",
+		
+		--DST
+		"glasscutter",
 
 		-- DLC: Shipwrecked:
 		"trident",
@@ -267,7 +270,9 @@ local DURABILITIES = {
 		"multitool_axe_pickaxe",
 		"machete",
 
-		"minfan", -- DST
+		-- DST
+		"minfan",
+		"moonglassaxe",
 
 		-- Mod: Scythe:
 		"Scythe"
