@@ -182,6 +182,11 @@ local DURABILITIES = {
 		"ruinshat",
 		"slurtlehat",
 
+		-- DST
+		"hivehat",
+		"armorskeleton",
+		"skeletonhat",
+
 		--
 		"wathgrithrhat",
 
