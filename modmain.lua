@@ -254,6 +254,7 @@ local DURABILITIES = {
 		"saddle_basic",
 		"saddle_war",
 		"saddle_race",
+		"saddlehorn",
 	},
 	SEWINGKIT_DURABILITY = {
 		"sewing_kit",
@@ -341,6 +342,7 @@ local DURABILITIES = {
 		"grass_umbrella",
 		"palmleaf_umbrella",
 		"double_umbrellahat",
+		"cookiecutterhat",
 		-- Mod: Fishbrella DST
 		"fishbrella",
 
