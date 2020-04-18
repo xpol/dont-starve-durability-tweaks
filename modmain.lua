@@ -355,7 +355,14 @@ local DURABILITIES = {
 		"minerhat",
 		"nightlight",
 		"pumpkin_lantern",
-        "molehat",
+		"molehat",
+		"thurible",
+		"lightbulb",
+		"wormlight",
+		"wormlight_lesser",
+		"spore_tall",
+		"spore_medium",
+		"spore_small",
 	},
 	TORCH_DURABILITY = {
 		"torch"
