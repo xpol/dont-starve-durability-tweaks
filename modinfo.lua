@@ -142,6 +142,13 @@ configuration_options =
 	},
 
 	{
+		name = "TORCH_DURABILITY",
+		label = "Torch life",
+		options = durability_options,
+		default = "Default",
+	},
+
+	{
 		name = "LIGHT_DURABILITY",
 		label = "Tweak portable light",
 		hover = "Lantern, lighter, miner's hat, nightlight, pumpkin lantern",
@@ -150,11 +157,13 @@ configuration_options =
 	},
 
 	{
-		name = "TORCH_DURABILITY",
-		label = "Torch life",
+		name = "FUELS_DURABILITY",
+		label = "Tweak light fuels",
+		hover = "Light bulb, wormlight and spores",
 		options = durability_options,
 		default = "Default",
 	},
+
 	{
 		name = "CAMPING_DURABILITY",
 		label = "Tweak sleep items",

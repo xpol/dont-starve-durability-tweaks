@@ -357,6 +357,8 @@ local DURABILITIES = {
 		"pumpkin_lantern",
 		"molehat",
 		"thurible",
+	},
+	FUELS_DURABILITY = {
 		"lightbulb",
 		"wormlight",
 		"wormlight_lesser",
