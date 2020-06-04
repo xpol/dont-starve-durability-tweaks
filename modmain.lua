@@ -350,6 +350,7 @@ local DURABILITIES = {
 		"cave_armor",
 	},
 	LIGHT_DURABILITY = {
+		"torch",
 		"lantern",
 		"lighter",
 		"minerhat",
@@ -365,9 +366,6 @@ local DURABILITIES = {
 		"spore_tall",
 		"spore_medium",
 		"spore_small",
-	},
-	TORCH_DURABILITY = {
-		"torch"
 	},
 	CAMPING_DURABILITY = {
 		"bedroll_furry",

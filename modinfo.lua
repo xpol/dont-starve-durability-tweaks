@@ -2,7 +2,7 @@ name = "Durability Tweaks 调整耐久度"
 description = "Tweaks durabilities of tools, weapons, armors, boats, staffs, amulets, saddles and more. 调整工具、武器盔甲、船只、法杖、护符和鞍具等的耐久度。"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
-version = "3.4.0"
+version = "3.4.1"
 
 forumthread = ""
 
@@ -20,34 +20,34 @@ dst_compatible = true
 client_only_mod = false
 
 local durability_options = {
-	{description = "Default", data = "Default"},
+	{description = "系统默认 Default", data = "Default"},
 	{description = "200%", data = 2},
 	{description = "400%", data = 4},
 	{description = "800%", data = 8},
-	{description = "Infinite", data = "Infinite"},
+	{description = "永久 Infinite", data = "Infinite"},
 }
 
 configuration_options =
 {
 	{
 		name = "WEAPON_DURABILITY",
-		label = "Weapons durability",
-		hover = "All but swords",
+		label = "武器 Weapons durability",
+		hover = "除了剑以外的武器 All but swords",
 		options = durability_options,
 		default = "Default",
 	},
 
 	{
 		name = "SWORD_DURABILITY",
-		label = "Swords durability",
-		hover = "nightsword",
+		label = "剑 Swords durability",
+		hover = "暗影剑等 nightsword etc...",
 		options = durability_options,
 		default = "Default",
 	},
 
 	{
 		name = "ARMOR_DURABILITY",
-		label = "Tweak armor life",
+		label = "护甲 Tweak armor life",
 		hover = "Include body & head armor",
 		options = durability_options,
 		default = "Default",
@@ -55,7 +55,7 @@ configuration_options =
 
 	{
 		name = "TOOL_DURABILITY",
-		label = "Tweak survival tools",
+		label = "生存工具 Tweak survival tools",
 		hover = "Tools in general",
 		options = durability_options,
 		default = "Default",
@@ -63,7 +63,7 @@ configuration_options =
 
 	{
 		name = "PROJECTILE_DURABILITY",
-		label = "Change boomerang uses",
+		label = "回旋镖 Change boomerang uses",
 		hover = "Boomerang",
 		options = durability_options,
 		default = "Default",
@@ -71,33 +71,33 @@ configuration_options =
 
 	{
 		name = "STAFF_DURABILITY",
-		label = "Tweak staffs uses",
+		label = "杖 Tweak staffs uses",
 		options = durability_options,
 		default = "Default",
 	},
 
 	{
 		name = "AMULET_DURABILITY",
-		label = "Tweak amulets duration",
+		label = "护符 Tweak amulets duration",
 		options = durability_options,
 		default = "Default",
 	},
 
 	{
 		name = "SEWINGKIT_DURABILITY",
-		label = "Tweak sewing kit",
+		label = "针线包 Tweak sewing kit",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "COMPASS_DURABILITY",
-		label = "Tweak compass",
+		label = "指南针 Tweak compass",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "PRIMARYTOOL_DURABILITY",
-		label = "Tweak primary tools",
+		label = "主要工具 Tweak primary tools",
 		hover = "Axe, pickaxe, shovel, hammer, pitchfork",
 		options = durability_options,
 		default = "Default",
@@ -105,21 +105,21 @@ configuration_options =
 
 	{
 		name = "GOLD_DURABILITY",
-		label = "Tweak gold items",
+		label = "黄金物品 Tweak gold items",
 		hover = "gold axe, gold pickaxe, gold shovel, weapons, armors",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "OBSIDIAN_DURABILITY",
-		label = "Obsidian items durability",
+		label = "远古物品 Obsidian items durability",
 		hover = "Obsidian axe, mahete, spear",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "TRAP_DURABILITY",
-		label = "Traps durability",
+		label = "陷阱 Traps durability",
 		hover = "trap, bird trap, teeth trap",
 		options = durability_options,
 		default = "Default",
@@ -127,7 +127,7 @@ configuration_options =
 
 	{
 		name = "HEATROCK_DURABILITY",
-		label = "Tweak heatrock",
+		label = "暖石头 Tweak heatrock",
 		hover = "heatrock warming speed in summer and cool down speed in winter",
 		options = durability_options,
 		default = "Default",
@@ -135,70 +135,44 @@ configuration_options =
 
 	{
 		name = "CLOTHING_DURABILITY",
-		label = "Tweak clothing decay",
-		hover = "Include all cloths and hats",
-		options = durability_options,
-		default = "Default",
-	},
-
-	{
-		name = "TORCH_DURABILITY",
-		label = "Torch life",
+		label = "衣物 Tweak clothing decay",
+		hover = "包括衣服和帽子 Include all cloths and hats",
 		options = durability_options,
 		default = "Default",
 	},
 
 	{
 		name = "LIGHT_DURABILITY",
-		label = "Tweak portable light",
-		hover = "Lantern, lighter, miner's hat, nightlight, pumpkin lantern",
+		label = "光源 Tweak portable light",
+		hover = "火把 灯笼 薇洛的打火机 矿工帽 鼹鼠帽 蓝挂灯 Lantern, lighter, miner's hat, nightlight, pumpkin lantern",
 		options = durability_options,
 		default = "Default",
 	},
 
 	{
 		name = "FUELS_DURABILITY",
-		label = "Tweak light fuels",
-		hover = "Light bulb, wormlight and spores",
+		label = "光源燃料 Tweak light fuels",
+		hover = "荧光珠 光莓 孢子 Light bulb, wormlight and spores",
 		options = durability_options,
 		default = "Default",
 	},
 
 	{
 		name = "CAMPING_DURABILITY",
-		label = "Tweak sleep items",
-		hover = "bed roll, tent, siesta hut",
+		label = "睡觉用品 Tweak sleep items",
+		hover = "睡袋 帐篷 凉棚 bed roll, tent, siesta hut",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "BOOK_DURABILITY",
-		label = "Book Durability",
-		options = durability_options,
-		default = "Default",
-	},
-	{
-		name = "BOAT_DURABILITY",
-		label = "Tweak boat(SW)",
-		hover = "Both boat and sail",
-		options = durability_options,
-		default = "Default",
-	},
-	{
-		name = "BOATITEMS_DURABILITY",
-		label = "Lantern, telescope & cannon(SW)",
-		options = durability_options,
-		default = "Default",
-	},
-	{
-		name = "BOATREPAIRKIT_DURABILITY",
-		label = "Boat repairkit durability(SW)",
+		label = "书籍耐久度 Book Durability",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "SADDLE_DURABILITY",
-		label = "Saddles durability(DST)",
+		label = "鞍具耐久度 Saddles Durability (DST)",
 		options = durability_options,
 		default = "Default",
 	},
