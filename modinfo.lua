@@ -31,20 +31,11 @@ configuration_options =
 {
 	{
 		name = "WEAPON_DURABILITY",
-		label = "武器 Weapons durability",
-		hover = "除了剑以外的武器 All but swords",
+		label = "所有武器 All Weapons",
+		hover = "所有等的武器 All weapons",
 		options = durability_options,
 		default = "Default",
 	},
-
-	{
-		name = "SWORD_DURABILITY",
-		label = "剑 Swords durability",
-		hover = "暗影剑等 nightsword etc...",
-		options = durability_options,
-		default = "Default",
-	},
-
 	{
 		name = "ARMOR_DURABILITY",
 		label = "护甲 Tweak armor life",
@@ -55,21 +46,14 @@ configuration_options =
 	{
 		name = "PRIMARYTOOL_DURABILITY",
 		label = "生产工具 Primary tools",
-		hover = "用于生产的工具 Tools used for work",
+		hover = "斧头等用于生产的工具 Tools used for work like axe",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "TOOL_DURABILITY",
 		label = "生存工具 Survival tools",
-		hover = "用于生存目的的工具 Tools for survival",
-		options = durability_options,
-		default = "Default",
-	},
-	{
-		name = "PROJECTILE_DURABILITY",
-		label = "回旋镖 Boomerang",
-		hover = "Boomerang",
+		hover = "捕虫网等用于生存目的的工具 Tools for survival like Bug Net",
 		options = durability_options,
 		default = "Default",
 	},
@@ -97,7 +81,6 @@ configuration_options =
 		options = durability_options,
 		default = "Default",
 	},
-
 	{
 		name = "GOLD_DURABILITY",
 		label = "黄金物品 Tweak gold items",
@@ -119,7 +102,6 @@ configuration_options =
 		options = durability_options,
 		default = "Default",
 	},
-
 	{
 		name = "HEATROCK_DURABILITY",
 		label = "暖石头 Tweak heatrock",
@@ -127,7 +109,6 @@ configuration_options =
 		options = durability_options,
 		default = "Default",
 	},
-
 	{
 		name = "CLOTHING_DURABILITY",
 		label = "衣物 Tweak clothing decay",
@@ -135,7 +116,6 @@ configuration_options =
 		options = durability_options,
 		default = "Default",
 	},
-
 	{
 		name = "LIGHT_DURABILITY",
 		label = "光源 Tweak portable light",
@@ -143,7 +123,6 @@ configuration_options =
 		options = durability_options,
 		default = "Default",
 	},
-
 	{
 		name = "FUELS_DURABILITY",
 		label = "光源燃料 Tweak light fuels",

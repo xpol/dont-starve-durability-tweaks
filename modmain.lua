@@ -101,9 +101,11 @@ local DURABILITIES = {
 		"tentaclespike",
 		"spear_wathgrithr",
 		"whip",
-		
+		"boomerang",
+
 		--DST
 		"glasscutter",
+		"nightsword",
 
 		-- DLC: Shipwrecked:
 		"trident",
@@ -112,7 +114,7 @@ local DURABILITIES = {
 		"peg_leg",
 
 		-- Mod: Madman's Fighting Pack:
-		"houndsbite",
+		"houndsbite", "goldsword", "nightsword", "strongsword", "marbleblade", "iceblade",
 
 		-- Mod: Ethereal spear:
 		"ethrl_spear",
@@ -140,15 +142,6 @@ local DURABILITIES = {
 
 		-- Mod: Twicane:
 		"twicane",
-	},
-	PROJECTILE_DURABILITY = {
-		"boomerang",
-	},
-	SWORD_DURABILITY = {
-		"nightsword",
-
-		-- Mod: Madman's Fighting Pack
-		"goldsword", "nightsword", "strongsword", "marbleblade", "iceblade",
 
 		-- Mod: Gold Survival Kit:
 		"sword_gold",
@@ -172,7 +165,6 @@ local DURABILITIES = {
 		"goldsword",  "stonesword",
 	},
 	ARMOR_DURABILITY = {
-
 		"armor_sanity",
 		"armordragonfly",
 		"armorgrass",
@@ -244,7 +236,6 @@ local DURABILITIES = {
 		"panflute",
 		-- DST
 		"brush",
-
 
 		-- Mod: Mining Machine [DST]:
 		"wrench",
