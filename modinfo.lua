@@ -152,7 +152,7 @@ configuration_options =
 	},
 	{
 		name = "SADDLE_DURABILITY",
-		label = "鞍具 Saddles (DST)",
+		label = "鞍具 Saddles",
 		options = durability_options,
 		default = "Default",
 	},
