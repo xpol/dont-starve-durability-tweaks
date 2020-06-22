@@ -38,8 +38,8 @@ configuration_options =
 	},
 	{
 		name = "ARMOR_DURABILITY",
-		label = "护甲 Tweak armor life",
-		hover = "头盔和护甲 body & head armor",
+		label = "护甲 Armors",
+		hover = "所有头盔和护甲 All body & head armors",
 		options = durability_options,
 		default = "Default",
 	},
@@ -90,15 +90,15 @@ configuration_options =
 	},
 	{
 		name = "OBSIDIAN_DURABILITY",
-		label = "远古物品 Obsidian items durability",
+		label = "远古物品 Obsidian items",
 		hover = "Obsidian axe, mahete, spear",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "TRAP_DURABILITY",
-		label = "陷阱 Traps durability",
-		hover = "trap, bird trap, teeth trap",
+		label = "陷阱 Traps",
+		hover = "陷阱，捕鸟陷阱、犬牙陷阱 trap, bird trap, teeth trap",
 		options = durability_options,
 		default = "Default",
 	},
@@ -111,21 +111,21 @@ configuration_options =
 	},
 	{
 		name = "CLOTHING_DURABILITY",
-		label = "衣物 Tweak clothing decay",
+		label = "衣帽 Cloths and hats",
 		hover = "包括衣服和帽子 Include all cloths and hats",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "LIGHT_DURABILITY",
-		label = "光源 Tweak portable light",
+		label = "光源 Lights",
 		hover = "火把 灯笼 薇洛的打火机 矿工帽 鼹鼠帽 蓝挂灯 Lantern, lighter, miner's hat, nightlight, pumpkin lantern",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "FUELS_DURABILITY",
-		label = "光源燃料 Tweak light fuels",
+		label = "光源的燃料 Fuels for Lights",
 		hover = "荧光珠 光莓 孢子 Light bulb, wormlight and spores",
 		options = durability_options,
 		default = "Default",
@@ -133,7 +133,7 @@ configuration_options =
 
 	{
 		name = "CAMPING_DURABILITY",
-		label = "睡觉用品 Tweak sleep items",
+		label = "睡觉用品 Sleep items",
 		hover = "睡袋 帐篷 凉棚 bed roll, tent, siesta hut",
 		options = durability_options,
 		default = "Default",
