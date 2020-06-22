@@ -48,57 +48,52 @@ configuration_options =
 	{
 		name = "ARMOR_DURABILITY",
 		label = "护甲 Tweak armor life",
-		hover = "Include body & head armor",
-		options = durability_options,
-		default = "Default",
-	},
-
-	{
-		name = "TOOL_DURABILITY",
-		label = "生存工具 Tweak survival tools",
-		hover = "Tools in general",
-		options = durability_options,
-		default = "Default",
-	},
-
-	{
-		name = "PROJECTILE_DURABILITY",
-		label = "回旋镖 Change boomerang uses",
-		hover = "Boomerang",
-		options = durability_options,
-		default = "Default",
-	},
-
-	{
-		name = "STAFF_DURABILITY",
-		label = "杖 Tweak staffs uses",
-		options = durability_options,
-		default = "Default",
-	},
-
-	{
-		name = "AMULET_DURABILITY",
-		label = "护符 Tweak amulets duration",
-		options = durability_options,
-		default = "Default",
-	},
-
-	{
-		name = "SEWINGKIT_DURABILITY",
-		label = "针线包 Tweak sewing kit",
-		options = durability_options,
-		default = "Default",
-	},
-	{
-		name = "COMPASS_DURABILITY",
-		label = "指南针 Tweak compass",
+		hover = "头盔和护甲 body & head armor",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "PRIMARYTOOL_DURABILITY",
-		label = "主要工具 Tweak primary tools",
-		hover = "Axe, pickaxe, shovel, hammer, pitchfork",
+		label = "生产工具 Primary tools",
+		hover = "用于生产的工具 Tools used for work",
+		options = durability_options,
+		default = "Default",
+	},
+	{
+		name = "TOOL_DURABILITY",
+		label = "生存工具 Survival tools",
+		hover = "用于生存目的的工具 Tools for survival",
+		options = durability_options,
+		default = "Default",
+	},
+	{
+		name = "PROJECTILE_DURABILITY",
+		label = "回旋镖 Boomerang",
+		hover = "Boomerang",
+		options = durability_options,
+		default = "Default",
+	},
+	{
+		name = "STAFF_DURABILITY",
+		label = "杖 Staffs",
+		options = durability_options,
+		default = "Default",
+	},
+	{
+		name = "AMULET_DURABILITY",
+		label = "护符 Amulets",
+		options = durability_options,
+		default = "Default",
+	},
+	{
+		name = "SEWINGKIT_DURABILITY",
+		label = "针线包 Sewing kit",
+		options = durability_options,
+		default = "Default",
+	},
+	{
+		name = "COMPASS_DURABILITY",
+		label = "指南针 Compass",
 		options = durability_options,
 		default = "Default",
 	},
@@ -166,13 +161,19 @@ configuration_options =
 	},
 	{
 		name = "BOOK_DURABILITY",
-		label = "书籍耐久度 Book Durability",
+		label = "书籍 Books",
+		options = durability_options,
+		default = "Default",
+	},
+	{
+		name = "SEAFARING_DURABILITY",
+		label = "航行物品 Seafaring items",
 		options = durability_options,
 		default = "Default",
 	},
 	{
 		name = "SADDLE_DURABILITY",
-		label = "鞍具耐久度 Saddles Durability (DST)",
+		label = "鞍具 Saddles (DST)",
 		options = durability_options,
 		default = "Default",
 	},

@@ -379,7 +379,7 @@ local DURABILITIES = {
 		"book_sleep",
 		"book_tentacles",
 	},
-	BOAT_DURABILITY = {
+	NAUTICAL_DURABILITY = { -- SW only
 		"sail",
 		"clothsail",
 		"snakeskinsail",
@@ -390,8 +390,9 @@ local DURABILITIES = {
 		"surfboard",
 		"cargoboat",
 		"armouredboat",
+		"boatrepairkit"
 	},
-	BOATITEMS_DURABILITY = {
+	SEAFARING_DURABILITY = { -- DST only
 		"boatcannon",
 		"boat_lantern",
 		"telescope",
@@ -399,9 +400,6 @@ local DURABILITIES = {
 		"harpoon",
 		"oar", -- 船桨
 		"oar_driftwood", -- 船桨
-	},
-	BOATREPAIRKIT_DURABILITY = {
-		"boatrepairkit"
 	},
 	OBSIDIAN_DURABILITY = {
 		"obsidianmachete",
