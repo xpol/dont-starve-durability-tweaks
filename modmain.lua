@@ -181,6 +181,7 @@ local DURABILITIES = {
 		"hivehat",
 		"armorskeleton",
 		"skeletonhat",
+		"walterhalt",
 
 		--
 		"wathgrithrhat",
