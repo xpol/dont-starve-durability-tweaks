@@ -287,6 +287,16 @@ local DURABILITIES = {
 		-- Mmod: Gold Hammer
 		"goldhammer",
 	},
+	RUINS_DURABILITY = {
+		"armorruins",
+		"ruins_bat",
+		"ruinshat",
+		"multitool_axe_pickaxe",
+	},
+	GLASS_DURABILITY = {
+		"glasscutter",
+		"moonglassaxe",
+	},
 	TRAP_DURABILITY = {
 		"birdtrap",
 		"trap",

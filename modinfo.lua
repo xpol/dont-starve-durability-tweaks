@@ -89,8 +89,22 @@ configuration_options =
 		default = "Default",
 	},
 	{
+		name = "RUINS_DURABILITY",
+		label = "远古(铥矿)物品 Ruins items",
+		hover = "Ruins armor, hat, bat, axe",
+		options = durability_options,
+		default = "Default",
+	},
+	{
+		name = "GLASS_DURABILITY",
+		label = "[DST]玻璃物品 Glass items",
+		hover = "Glass cutter and axe",
+		options = durability_options,
+		default = "Default",
+	},
+	{
 		name = "OBSIDIAN_DURABILITY",
-		label = "远古物品 Obsidian items",
+		label = "[SW]黑曜石物品 Obsidian items",
 		hover = "Obsidian axe, mahete, spear",
 		options = durability_options,
 		default = "Default",
