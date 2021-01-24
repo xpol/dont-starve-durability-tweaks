@@ -410,7 +410,13 @@ local DURABILITIES = {
 	},
 	HEATROCK_DURABILITY = {
 		"heatrock"
-	}
+	},
+	FARMING_DURABILITY = {
+		"farm_hoe",
+		"advanced_farm_hoe",
+		"farm_plow_item",
+		"wateringcan",
+	},
 }
 
 for option, prefabs in pairs(DURABILITIES) do

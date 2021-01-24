@@ -170,4 +170,10 @@ configuration_options =
 		options = durability_options,
 		default = "Default",
 	},
+	{
+		name = "FARMING_DURABILITY",
+		label = "农耕 Farming items",
+		options = durability_options,
+		default = "Default",
+	}
 }
