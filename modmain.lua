@@ -413,10 +413,13 @@ local DURABILITIES = {
 	},
 	FARMING_DURABILITY = {
 		"farm_hoe",
-		"goden_farm_hoe",
-		"advanced_farm_hoe",
+		"golden_farm_hoe",
 		"farm_plow_item",
 		"wateringcan",
+		"soil_amender",
+		"book_meteor",
+		"book_horticulture",
+		"book_silviculture",
 	},
 }
 
