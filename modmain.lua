@@ -237,6 +237,7 @@ local DURABILITIES = {
 		"panflute",
 		-- DST
 		"brush",
+		"malbatross_beak",
 
 		-- Mod: Mining Machine [DST]:
 		"wrench",
