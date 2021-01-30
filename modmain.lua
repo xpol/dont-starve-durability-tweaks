@@ -345,6 +345,8 @@ local DURABILITIES = {
 		"palmleaf_umbrella",
 		"double_umbrellahat",
 		"cookiecutterhat",
+		"goggleshat",
+		"deserthat",
 		-- Mod: Fishbrella DST
 		"fishbrella",
 
