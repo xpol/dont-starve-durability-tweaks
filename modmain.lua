@@ -102,6 +102,7 @@ local DURABILITIES = {
 		"spear_wathgrithr",
 		"whip",
 		"boomerang",
+		"fence_rotor",
 
 		--DST
 		"glasscutter",
@@ -313,6 +314,7 @@ local DURABILITIES = {
 		"catcoonhat",
 		"earmuffshat",
 		"eyebrellahat",
+		"eyemaskhat",
 		"featherhat",
 		"flowerhat",
 		"grass_umbrella",
