@@ -101,12 +101,12 @@ local DURABILITIES = {
 		"tentaclespike",
 		"spear_wathgrithr",
 		"whip",
-		"boomerang",
-		"fence_rotor",
 
 		--DST
 		"glasscutter",
 		"nightsword",
+		"fence_rotor",
+		"shieldofterror",
 
 		-- DLC: Shipwrecked:
 		"trident",
@@ -183,6 +183,7 @@ local DURABILITIES = {
 		"armorskeleton",
 		"skeletonhat",
 		"walterhat",
+		"antlionhat",
 
 		--
 		"wathgrithrhat",
