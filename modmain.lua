@@ -222,6 +222,9 @@ local DURABILITIES = {
 		"nightstick",
 		"opalstaff",
 		"staff_tornado",
+		"staff_lunarplant",
+		"bonestaff",
+		"volcanostaff",
 	},
 	AMULET_DURABILITY = {
 		"amulet",
