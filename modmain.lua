@@ -107,6 +107,10 @@ local DURABILITIES = {
 		"nightsword",
 		"fence_rotor",
 		"shieldofterror",
+		"spear_wathgrithr_lightning",
+		"spear_wathgrithr_lightning_charged",
+		"wathgrithr_shield",
+		"sword_lunarplant",
 
 		-- DLC: Shipwrecked:
 		"trident",
