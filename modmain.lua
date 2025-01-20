@@ -191,6 +191,7 @@ local DURABILITIES = {
 
 		--
 		"wathgrithrhat",
+		"wathgrithr_improvedhat",
 
 		-- DLC: Shipwrecked:
 		"armorlimestone",
