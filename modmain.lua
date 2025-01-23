@@ -112,6 +112,15 @@ local DURABILITIES = {
 		"wathgrithr_shield",
 		"sword_lunarplant",
 
+		-- Wolfgang
+		"dumbbell",
+		"dumbbell_golden",
+		"dumbbell_marble",
+		"dumbbell_gem",
+		"dumbbell_heat",
+		"dumbbell_redgem"
+		"dumbbell_bluegem",
+
 		-- DLC: Shipwrecked:
 		"trident",
 		"spear_poison",
