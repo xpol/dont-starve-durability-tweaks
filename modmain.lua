@@ -118,7 +118,7 @@ local DURABILITIES = {
 		"dumbbell_marble",
 		"dumbbell_gem",
 		"dumbbell_heat",
-		"dumbbell_redgem"
+		"dumbbell_redgem",
 		"dumbbell_bluegem",
 
 		-- DLC: Shipwrecked:

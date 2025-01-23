@@ -2,7 +2,7 @@ name = "Durability Tweaks 调整耐久度"
 description = "Tweaks durabilities of tools, weapons, armors, boats, staffs, amulets, saddles and more. 调整工具、武器盔甲、船只、法杖、护符和鞍具等的耐久度。"
 author = "DMCartz, Phixius83, Noldaz, xpolife"
 
-version = "3.5.15"
+version = "3.5.16"
 
 forumthread = ""
 
