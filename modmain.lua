@@ -111,6 +111,7 @@ local DURABILITIES = {
 		"spear_wathgrithr_lightning_charged",
 		"wathgrithr_shield",
 		"sword_lunarplant",
+		"rabbitkingspear",
 
 		-- Wolfgang
 		"dumbbell",
@@ -197,10 +198,11 @@ local DURABILITIES = {
 		"skeletonhat",
 		"walterhat",
 		"antlionhat",
-
-		--
 		"wathgrithrhat",
 		"wathgrithr_improvedhat",
+		"dreadstonehat",
+		"armordreadstone",
+		
 
 		-- DLC: Shipwrecked:
 		"armorlimestone",
