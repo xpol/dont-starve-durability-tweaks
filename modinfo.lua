@@ -175,5 +175,11 @@ configuration_options =
 		label = "农耕 Farming items",
 		options = durability_options,
 		default = "Default",
+	},
+	{
+		name = "WX87_MODULES",
+		label = "WX87 模块 WX87 modules",
+		options = durability_options,
+		default = "Default",
 	}
 }

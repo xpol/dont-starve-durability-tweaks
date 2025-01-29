@@ -202,7 +202,7 @@ local DURABILITIES = {
 		"wathgrithr_improvedhat",
 		"dreadstonehat",
 		"armordreadstone",
-		
+		"gnarwail_horn",
 
 		-- DLC: Shipwrecked:
 		"armorlimestone",
@@ -445,6 +445,23 @@ local DURABILITIES = {
 		"book_meteor",
 		"book_horticulture",
 		"book_silviculture",
+	},
+	WX87_MODULES = {
+		"wx78module_maxhealth",
+		"wx78module_maxhealth2",
+		"wx78module_maxsanity1",
+		"wx78module_maxsanity",
+		"wx78module_bee",
+		"wx78module_music",
+		"wx78module_maxhunger1",
+		"wx78module_maxhunger",
+		"wx78module_movespeed",
+		"wx78module_movespeed2",
+		"wx78module_heat",
+		"wx78module_cold",
+		"wx78module_taser",
+		"wx78module_nightvision",
+		"wx78module_light",
 	},
 }
 
