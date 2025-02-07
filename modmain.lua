@@ -112,6 +112,8 @@ local DURABILITIES = {
 		"wathgrithr_shield",
 		"sword_lunarplant",
 		"rabbitkingspear",
+		"voidcloth_scythe",
+		"voidcloth_boomerang",
 
 		-- Wolfgang
 		"dumbbell",
@@ -203,6 +205,9 @@ local DURABILITIES = {
 		"dreadstonehat",
 		"armordreadstone",
 		"gnarwail_horn",
+		"armor_voidcloth",
+		"voidclothhat",
+		"voidcloth_umbrella",
 
 		-- DLC: Shipwrecked:
 		"armorlimestone",
