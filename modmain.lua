@@ -114,6 +114,7 @@ local DURABILITIES = {
 		"rabbitkingspear",
 		"voidcloth_scythe",
 		"voidcloth_boomerang",
+		"shadow_battleaxe",
 
 		-- Wolfgang
 		"dumbbell",
@@ -208,6 +209,7 @@ local DURABILITIES = {
 		"armor_voidcloth",
 		"voidclothhat",
 		"voidcloth_umbrella",
+		"moonstorm_goggleshat",
 
 		-- DLC: Shipwrecked:
 		"armorlimestone",
