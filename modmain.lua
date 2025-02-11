@@ -115,6 +115,7 @@ local DURABILITIES = {
 		"voidcloth_scythe",
 		"voidcloth_boomerang",
 		"shadow_battleaxe",
+		"sword_lunarplant",
 
 		-- Wolfgang
 		"dumbbell",
@@ -210,6 +211,8 @@ local DURABILITIES = {
 		"voidclothhat",
 		"voidcloth_umbrella",
 		"moonstorm_goggleshat",
+		"armor_lunarplant",
+		"lunarplanthat",
 
 		-- DLC: Shipwrecked:
 		"armorlimestone",
@@ -244,6 +247,7 @@ local DURABILITIES = {
 		"staff_lunarplant",
 		"bonestaff",
 		"volcanostaff",
+		"staff_lunarplant",
 	},
 	AMULET_DURABILITY = {
 		"amulet",
@@ -295,6 +299,8 @@ local DURABILITIES = {
 		-- DST
 		"minfan",
 		"moonglassaxe",
+		"pickaxe_lunarplant",
+		"shovel_lunarplant",
 
 		-- Mod: Scythe:
 		"Scythe"
