@@ -213,6 +213,8 @@ local DURABILITIES = {
 		"moonstorm_goggleshat",
 		"armor_lunarplant",
 		"lunarplanthat",
+		"scraphat",
+		"scrap_monoclehat",
 
 		-- DLC: Shipwrecked:
 		"armorlimestone",
